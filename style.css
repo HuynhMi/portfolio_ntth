@@ -1,0 +1,313 @@
+:root {
+	--primary-color: #556dd0;
+	--white-color: #ffffff;
+	--light-black-color: #474747;
+	--dark-black-color: #000000;
+	--grey-color: #e0e0e0;
+
+	/* height */
+	--header-height: 175px;
+	--footer-height: 285px;
+	--banner-height: 245px;
+}
+
+html {
+	font-family: 'Athiti', sans-serif;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* reset css */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h3 {
+	font-size: 40px;
+}
+
+h4 {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Global classes */
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex.gap-16 {
+	gap: 16px;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex--center {
+	align-items: center;
+	justify-content: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-column-gap: 24px;
+}
+
+.grid .col-6 {
+	grid-column: span 6;
+}
+
+.grid .col-4 {
+	grid-column: span 4;
+}
+
+.text-white {
+	color: var(--white-color);
+}
+
+
+/* ************************ */
+header {
+	height: var(--header-height);
+	background-color: var(--light-black-color);
+}
+
+main {
+	background-color: var(--white-color);
+	padding: 95px 0px;
+}
+
+nav {
+	color: var(--white-color);
+	display: flex;
+	align-items: center;
+	height: var(--header-height);
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+	margin-left: auto;
+}
+
+nav ul li {
+	transition: all linear 0.15s;
+}
+
+nav ul li:hover {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+nav ul li.active {
+	color: var(--primary-color);
+}
+
+.logo {
+	font-size: 70px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
+
+.banner {
+	height: var(--banner-height);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--white-color);
+}
+
+.about,
+.products,
+.interest {
+	margin-bottom: 55px;
+}
+
+.intro {
+	background-color: var(--grey-color);
+	padding: 115px 0px 115px 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 80px;
+}
+
+.intro__avatar {
+	--size: 215px;
+	height: var(--size);
+	width: var(--size);
+
+	border-radius: 100%;
+	border: 5px solid var(--primary-color);
+	overflow: hidden;
+}
+
+.intro__subtitle {
+	font-size: 36px;
+}
+
+.intro__avatar image {
+	height: 100%;
+	width: 100%;
+}
+
+.title {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 50px;
+}
+
+.title-line {
+	height: 1px;
+	margin-left: 50px;
+	display: block;
+	flex: 1;
+	background-color: var(--primary-color);
+}
+
+.slogan {
+	color: var(--primary-color);
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	/* line-height: 130.5%;
+	letter-spacing: 2px; */
+}
+
+.about-content {
+	text-align: justify;
+}
+
+.down {
+	color: var(--primary-color);
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 2px;
+
+	margin-left: auto;
+}
+
+.product-item {
+	background-color: var(--grey-color);
+	min-height: 100px;
+	padding: 5px 5px 40px;
+	margin-bottom: 70px;
+}
+
+.product-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.product-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.product-content--no-pad {
+	padding: 30px 20px 0px;
+}
+.product-content {
+	text-align: center;
+	padding: 30px 20px 0px;
+}
+
+.product-content.move {
+	padding: unset;
+	position: relative;
+	top: -50px;
+}
+
+.product-photos-group {
+	display: flex;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+footer {
+	height: var(--footer-height);
+	background-color: var(--light-black-color);
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--footer-height);
+}
+
+.footer-item {
+}
+
+.footer-title {
+	font-size: 30px;
+	font-weight: 600;
+	color: var(--white-color);
+}
+
+.footer-title-2 {
+	font-size: 40px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
