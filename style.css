@@ -15,6 +15,8 @@ html {
 	font-family: 'Athiti', sans-serif;
 	font-size: 20px;
 	box-sizing: border-box;
+
+	scroll-behavior: smooth;
 }
 
 *,
@@ -117,7 +119,6 @@ img {
 	color: var(--white-color);
 }
 
-
 /* ************************ */
 header {
 	height: var(--header-height);
@@ -143,16 +144,17 @@ nav ul {
 	margin-left: auto;
 }
 
-nav ul li {
+nav ul li a {
 	transition: all linear 0.15s;
+	color: var(--white);
 }
 
-nav ul li:hover {
+nav ul li a:hover {
 	color: var(--primary-color);
 	cursor: pointer;
 }
 
-nav ul li.active {
+nav ul li.active a {
 	color: var(--primary-color);
 }
 
@@ -178,6 +180,29 @@ nav ul li.active {
 	margin-bottom: 55px;
 }
 
+.btn {
+	--size: 40px;
+	height: var(--size);
+	border-radius: var(--size);
+	padding: 0px 20px;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+
+	font-size: 16px;
+	font-weight: 400;
+
+	transition: all linear 0.2s;
+
+	border: unset;
+	outline: 2px solid var(--primary-color);
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: var(--white-color);
+	color: var(--primary-color);
+}
+
 .intro {
 	background-color: var(--grey-color);
 	padding: 115px 0px 115px 0px;
@@ -200,6 +225,7 @@ nav ul li.active {
 
 .intro__subtitle {
 	font-size: 36px;
+	margin-bottom: 30px;
 }
 
 .intro__avatar image {
@@ -243,6 +269,12 @@ nav ul li.active {
 	letter-spacing: 2px;
 
 	margin-left: auto;
+
+	transition: all linear 0.4s;
+}
+
+.down:hover {
+	transform: scale(1.2);
 }
 
 .product-item {
